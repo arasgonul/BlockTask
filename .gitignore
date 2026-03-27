@@ -1,41 +1,80 @@
-# Prerequisites
-*.d
+# -----------------------------------------------------------------------------
+# Unreal Engine — keep Source/, Content/, Config/, *.uproject; exclude build/cache
+# -----------------------------------------------------------------------------
 
-# Compiled Object files
+# Build outputs & editor caches
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Build/
+.vs/
+
+# Visual Studio / MSBuild
+*.sln
+*.suo
+*.user
+*.userosscache
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+*.opensdf
+*.sdf
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Xcode (macOS)
+*.xcodeproj
+*.xcworkspace
+
+# Local / per-developer content (optional UE folders)
+Content/Collections/
+Content/Developers/
+
+# Custom plugins: ignore generated folders only
+Plugins/**/Binaries/
+Plugins/**/Intermediate/
+Plugins/**/DerivedDataCache/
+
+# Python (UE automation)
+**/__pycache__/
+*.pyc
+
+# OS junk
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs & temp
+*.log
+enc_temp_folder/
+
+# -----------------------------------------------------------------------------
+# Common C/C++ intermediates (avoid ignoring vendored libs under Plugins/Source)
+# -----------------------------------------------------------------------------
+*.d
 *.slo
 *.lo
 *.o
 *.obj
-
-# Precompiled Headers
 *.gch
 *.pch
-
-# Linker files
 *.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
+*.dwo
 *.mod
 *.smod
-
-# Compiled Static libraries
 *.lai
 *.la
 *.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# debug information files
-*.dwo
